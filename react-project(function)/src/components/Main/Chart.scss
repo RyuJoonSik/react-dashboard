@@ -1,0 +1,37 @@
+@charset 'utf-8';
+.chart {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+
+  &__list {
+    margin-bottom: 1rem;
+
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+
+  &__item {
+    float: left;
+  }
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    color: #818688;
+    font-weight: bold;
+  }
+
+  &__btn--isClicked {
+    color: #389fca;
+    border-bottom: 2px solid #389fca;
+  }
+
+  &__canvas {
+    width: 100%;
+    height: calc(100% - 39px - 1rem);
+  }
+}

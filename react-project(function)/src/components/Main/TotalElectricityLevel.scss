@@ -1,0 +1,55 @@
+@charset 'utf-8';
+@mixin item($color) {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: $color;
+  color: #fff;
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.5rem solid transparent;
+    border-top-color: $color;
+    content: "";
+  }
+}
+
+.total-electricity-level {
+  background-color: #eee;
+  border-radius: 1.5rem;
+
+  &__item {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    color: #818688;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__item--1 {
+    @include item(#69e34e);
+  }
+
+  &__item--2 {
+    @include item(#ffdf07);
+  }
+
+  &__item--3 {
+    @include item(#ff9800);
+  }
+
+  &__item--4 {
+    @include item(#ea1568);
+  }
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

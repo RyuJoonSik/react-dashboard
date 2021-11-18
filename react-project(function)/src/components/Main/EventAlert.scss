@@ -1,0 +1,50 @@
+@charset 'utf-8';
+.event-alert {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  width: calc((100% - 2rem) / 3);
+  height: 100%;
+  padding: 1rem;
+  border-left: 0.5rem solid;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: #eee;
+
+  &__word {
+    color: #818688;
+    font-weight: bold;
+  }
+
+  &__value {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #555;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  & + & {
+    margin-left: 1rem;
+  }
+}
+
+.event-alert--herb {
+  border-color: #8176ba;
+}
+.event-alert--socket {
+  border-color: #62d17e;
+}
+.event-alert--coolingHeating {
+  border-color: #80efe5;
+}
+.event-alert--lighting {
+  border-color: #e9d248;
+}
+.event-alert--energy {
+  border-color: #4878ca;
+}
+.event-alert--sensor {
+  border-color: #898e9a;
+}

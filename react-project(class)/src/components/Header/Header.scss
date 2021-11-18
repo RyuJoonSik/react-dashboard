@@ -1,0 +1,9 @@
+$bg-color: #1a93e5;
+
+.header {
+  height: 4rem;
+  background-color: #{$bg-color};
+}
+
+@media (orientation: portrait) {
+}

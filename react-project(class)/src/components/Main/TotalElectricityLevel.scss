@@ -1,0 +1,74 @@
+@mixin item($color) {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: $color;
+  color: #fff;
+}
+
+@mixin item-after($color) {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.5rem solid transparent;
+  border-top-color: $color;
+  content: "";
+}
+
+.total-electricity-level {
+  background-color: #eee;
+  border-radius: 1.5rem;
+
+  &__item {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    color: #818688;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__item--1 {
+    $item-color: #69e34e;
+    @include item($item-color);
+
+    &::after {
+      @include item-after($item-color);
+    }
+  }
+
+  &__item--2 {
+    $item-color: #ffdf07;
+    @include item($item-color);
+
+    &::after {
+      @include item-after($item-color);
+    }
+  }
+
+  &__item--3 {
+    $item-color: #ff9800;
+    @include item($item-color);
+
+    &::after {
+      @include item-after($item-color);
+    }
+  }
+
+  &__item--4 {
+    $item-color: #ea1568;
+    @include item($item-color);
+
+    &::after {
+      @include item-after($item-color);
+    }
+  }
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

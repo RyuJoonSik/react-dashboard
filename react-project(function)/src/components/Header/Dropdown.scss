@@ -1,0 +1,32 @@
+@charset 'utf-8';
+@import "./Variables";
+
+.header-dropdown {
+  position: relative;
+  float: left;
+
+  &__btn {
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #1a93e5;
+    color: #fff;
+
+    &:hover {
+      background-color: #{$bg-color-hover};
+      color: #ddd;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-dropdown {
+    display: none;
+  }
+}

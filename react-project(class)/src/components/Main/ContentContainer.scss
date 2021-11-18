@@ -1,0 +1,14 @@
+.content-container {
+  height: calc((100% - 2rem) / 2);
+  box-sizing: border-box;
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  & + & {
+    margin-top: 2rem;
+  }
+}

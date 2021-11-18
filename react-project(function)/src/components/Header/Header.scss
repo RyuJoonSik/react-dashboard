@@ -1,0 +1,7 @@
+@charset 'utf-8';
+@import "./Variables";
+
+.header {
+  height: 4rem;
+  background-color: #{$bg-color};
+}

@@ -1,0 +1,28 @@
+.content {
+  float: left;
+  box-sizing: border-box;
+  width: calc((100% - 4rem) / 3);
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__main {
+    height: calc(100% - 1.5rem - 3rem);
+  }
+
+  & + & {
+    margin-left: 2rem;
+  }
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

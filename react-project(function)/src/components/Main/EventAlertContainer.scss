@@ -1,0 +1,18 @@
+@charset 'utf-8';
+.event-alert-container {
+  height: 100%;
+
+  &__wrap {
+    height: calc(50% - 1rem);
+
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

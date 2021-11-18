@@ -1,0 +1,41 @@
+.total-electricity-content {
+  height: calc(100% - 3rem);
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100% / 4);
+
+    & + & {
+      border-top: 2px solid #e5ecee;
+    }
+  }
+
+  &__word {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #818688;
+    font-weight: bold;
+  }
+
+  &__desc {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #389fca;
+  }
+
+  &__KWh {
+    margin-left: 0.5rem;
+    color: #818688;
+    font-size: 1.2rem;
+    vertical-align: super;
+  }
+}
